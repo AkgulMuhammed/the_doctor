@@ -30,17 +30,17 @@ class HomePage extends StatelessWidget {
               child: SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
-                  children:  [
+                  children: [
                     const doctorCards(
                         doctorName: DrConstants.doctorCardTitleTwo,
                         text: DrConstants.doctorCardDepartmentTwo,
                         image: DrConstants.doctorCardOne),
-                        DrConstants.sizedBoxWidth10,
+                    DrConstants.sizedBoxWidth10,
                     const doctorCards(
                         doctorName: DrConstants.doctorCardTitleOne,
                         text: DrConstants.doctorCardDepartmentOne,
                         image: DrConstants.doctorCardTwo),
-                        DrConstants.sizedBoxWidth10,
+                    DrConstants.sizedBoxWidth10,
                     const doctorCards(
                         doctorName: DrConstants.doctorCardTitleTwo,
                         text: DrConstants.doctorCardDepartmentTwo,
@@ -291,4 +291,3 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-
