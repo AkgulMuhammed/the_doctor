@@ -4,15 +4,20 @@ class DrConstants {
 /*                                                 Padding                                                            */
 
 //Padding
+
   static const EdgeInsets paddingRightLeft25 =
       EdgeInsets.only(right: 25, left: 25);
-      static const EdgeInsets paddingRightLeftTop10 =
-      EdgeInsets.only(right: 10, left: 10,top: 10);
+  static const EdgeInsets paddingRightLeft10 =
+      EdgeInsets.only(right: 10, left: 10);
+  static const EdgeInsets paddingRightLeft20 =
+      EdgeInsets.only(right: 20, left: 20);
+  static const EdgeInsets paddingRightLeftTop10 =
+      EdgeInsets.only(right: 10, left: 10, top: 10);
 /*                                                 Colors                                                            */
 
 //colors
-
-
+static const colorGreen = Colors.green;
+  static const colorBlack = Colors.black;
   static const colorSkyblue = Color.fromARGB(255, 141, 211, 216);
   static const colorRedorange = Color.fromARGB(255, 246, 96, 96);
   static const colorBlack87 = Colors.black87;
@@ -21,17 +26,12 @@ class DrConstants {
   static const Color colorMainColor = Color.fromRGBO(116, 104, 223, 0.9);
   static const colorRose = Color.fromARGB(255, 249, 182, 182);
   static const colorWhite = Colors.white;
-
+  static const colorDoctorCardColor = Color.fromARGB(255, 227, 225, 245);
 
   static const colorBlueone = Color.fromARGB(255, 249, 182, 182);
-
   static const colorgrey = Color.fromARGB(255, 135, 135, 135);
-
-  
-  
   static const colorgreen100 = Color.fromARGB(255, 200, 230, 201);
   static const colorred100 = Color.fromARGB(255, 229, 64, 64);
-  static const colorgreen = Colors.green;
   static const colortransparent = Colors.transparent;
   static const colorlightgrey = Color.fromARGB(255, 221, 219, 219);
 /*                                                 Radius Circular                                                            */
@@ -66,9 +66,11 @@ class DrConstants {
   static const String homePageCircleAvatarImage = 'assets/home/avatar.png';
   static const String homePageCardDoctorImage = 'assets/home/cardDoctor.png';
   static const String homePageMiniIconsStetescop = 'assets/home/stetescop.png';
- static const String homePageMiniIconsLabs = 'assets/home/labs.png';
- static const String homePageMiniIconsHeal = 'assets/home/heal.png';
- static const String homePageMiniIconsAmbulance = 'assets/home/ambulance.png';
+  static const String homePageMiniIconsLabs = 'assets/home/labs.png';
+  static const String homePageMiniIconsHeal = 'assets/home/heal.png';
+  static const String homePageMiniIconsAmbulance = 'assets/home/ambulance.png';
+  static const String doctorCardOne = 'assets/home/doctorcardone.png';
+  static const String doctorCardTwo = 'assets/home/doctorcardtwo.png';
 
   /*                                                 Strings                                                     */
   //Start Page Image
@@ -136,11 +138,11 @@ class DrConstants {
   static const String dPageDateYear = 'May, 2022';
   static const String dPageUpcoming = 'Upcomming';
 
-  static const String dPageCardTitleOne = 'Dr. Seamle John';
-  static const String dPageCardDepartmentOne = 'Pediatrican';
+  static const String doctorCardTitleOne = 'Dr. Seamle John';
+  static const String doctorCardDepartmentOne = 'Pediatrican';
 
-  static const String dPageCardTitleTwo = 'Dr. Jerem\'s Steve  ';
-  static const String dPageCardDepartmentTwo = 'Cardiologlist';
+  static const String doctorCardTitleTwo = 'Dr. Jerem\'s Steve  ';
+  static const String doctorCardDepartmentTwo = 'Cardiologlist';
 
   static const String dPageCardDate = '16, May 2022';
   static const String dPageCardClock = '09:00AM';

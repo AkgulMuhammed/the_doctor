@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:the_doctor/constants/constants.dart';
+import 'package:the_doctor/navPages/home_Page.dart';
+import 'package:the_doctor/nav_bar.dart';
 import 'package:the_doctor/widgets/start_page_shadow_icon.dart';
 
 class StartPage extends StatelessWidget {
@@ -16,9 +18,16 @@ class StartPage extends StatelessWidget {
           DrConstants.sizedBoxHeight10,
           _subTitle(context),
           Expanded(child: Container()),
-          const StartPageShadowIcon(icons: Icons.arrow_forward),
+          GestureDetector(
+              onTap: () {
+                Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(builder: ((context) => MainPage())));
+              },
+              child: CircleAvatar(
+                  child: Icon(Icons.arrow_forward),
+                  maxRadius: 40,
+                  backgroundColor: DrConstants.colorMainColor)),
           DrConstants.sizedBoxHeight40
-
         ],
       ),
     );
@@ -26,14 +35,16 @@ class StartPage extends StatelessWidget {
 
   Padding _subTitle(BuildContext context) {
     return Padding(
-          padding: DrConstants.paddingRightLeft25,
-          child: Text(
-            DrConstants.sPageSubTitle,
-            textAlign: TextAlign.center,
-            style: Theme.of(context).textTheme.subtitle2?.copyWith(
-            color: DrConstants.colorBlack38),
-          ),
-        );
+      padding: DrConstants.paddingRightLeft25,
+      child: Text(
+        DrConstants.sPageSubTitle,
+        textAlign: TextAlign.center,
+        style: Theme.of(context)
+            .textTheme
+            .subtitle2
+            ?.copyWith(color: DrConstants.colorBlack38),
+      ),
+    );
   }
 
   Text _titleText(BuildContext context) => Text(

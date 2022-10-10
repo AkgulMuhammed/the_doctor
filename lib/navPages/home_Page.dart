@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:the_doctor/constants/constants.dart';
 import 'package:the_doctor/widgets/gradient_text.dart';
 import 'package:the_doctor/widgets/mini_container_bottom.dart';
 import 'package:the_doctor/widgets/shadow_icons.dart';
+
+import '../widgets/doctor_cards.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -10,19 +13,44 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          _appbarAndSearchBarAll(context),
-          DrConstants.sizedBoxHeight20,
-          _learnMoreCard(context),
-          DrConstants.sizedBoxHeight20,
-          _miniContainers(),
-          DrConstants.sizedBoxHeight15,
-          _gradientText(context),
-          DrConstants.sizedBoxHeight15,
-          Container()
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            _appbarAndSearchBarAll(context),
+            DrConstants.sizedBoxHeight20,
+            _learnMoreCard(context),
+            DrConstants.sizedBoxHeight20,
+            _miniContainers(),
+            DrConstants.sizedBoxHeight15,
+            _gradientText(context),
+            DrConstants.sizedBoxHeight15,
+            Padding(
+              padding: DrConstants.paddingRightLeft25,
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children:  [
+                    const doctorCards(
+                        doctorName: DrConstants.doctorCardTitleTwo,
+                        text: DrConstants.doctorCardDepartmentTwo,
+                        image: DrConstants.doctorCardOne),
+                        DrConstants.sizedBoxWidth10,
+                    const doctorCards(
+                        doctorName: DrConstants.doctorCardTitleOne,
+                        text: DrConstants.doctorCardDepartmentOne,
+                        image: DrConstants.doctorCardTwo),
+                        DrConstants.sizedBoxWidth10,
+                    const doctorCards(
+                        doctorName: DrConstants.doctorCardTitleTwo,
+                        text: DrConstants.doctorCardDepartmentTwo,
+                        image: DrConstants.doctorCardOne)
+                  ],
+                ),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
@@ -263,3 +291,4 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
