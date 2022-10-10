@@ -9,7 +9,8 @@ class ChatPage extends StatelessWidget {
       body: Column(
         children: [
           Expanded(flex: 2, child: Container()),
-          Expanded(flex: 4,
+          Expanded(
+            flex: 4,
             child: Center(
               child: Column(
                 children: [
@@ -20,7 +21,7 @@ class ChatPage extends StatelessWidget {
                         .headline4
                         ?.copyWith(color: Colors.black),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Text(
                     'Coded By Muhammed Akgül',
                     style: Theme.of(context)
